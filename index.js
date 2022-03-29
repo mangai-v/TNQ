@@ -1,12 +1,19 @@
-function countInstances(string, word) {
-  return string.split(word).length - 1;
-}
-let str =
-  "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript JavaScript code outside a web browser.";
-let value = document.querySelector("input");
+let content = document.querySelector("#content");
+let find = document.getElementById("find");
+let submit = document.getElementById("submit");
 
-value.addEventListener("keyup", e => {
-  if (e.key === "Enter") {
-    console.log(countInstances(str, e.target.value));
-  }
+submit.addEventListener("click", e => {
+  e.preventDefault();
+  
+  let words = content.value;
+  let value = find.value;
+  let array = words.split(" ");
+  let count = 0;
+
+  let filtered = array.forEach((val, index, array) => {
+    if (val === value) {
+      count++;
+    }
+  });
+   result.textContent= `${count} Matches found`
 });

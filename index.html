@@ -8,24 +8,16 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <div class="mainBlock">
-        <div class="firstDivision">
-            <h1>Enter some text</h1>
-       
-            <input type="text" class="content" >
-       
-        </div>
-       <div class="secDivision">
-            <h1>Enter character to lookup</h1>
-       
-            <input type="text"  class="content">
-       </div>
-       
-      <div>
-            <input type="checkbox" name="checkbox" class="checkbox">Case Sensitive
-      </div>
-        <button id="btn">Lookup</button>
-    </div>
+    <form>
+        
+        <textarea name="message" id="content" rows="10" cols="30">Enter some text</textarea>
+        <div class="block"><input type="text" id="find" placeholder="Enter Character to lookup"/></div>
+        <input type="checkbox" name="checkbox" id="checkbox" >Case sensitive
+        <button id="submit">Look up</button>
+        <div id="result"></div>
+  <br><br>
+ 
+    </form>
     <script src="./index.js"></script>
 </body>
 </html>
